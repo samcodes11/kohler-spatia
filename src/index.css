@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 93.75%;
+  }
+
+  body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.55;
+    color: #1C1714;
+    background-color: #FAEFF1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #1C1714;
+  }
+}
+
+:root {
+  --color-accent: #825916;
+  --color-accent-hover: #6B480F;
+  --color-accent-soft: rgba(130, 89, 22, 0.14);
+  --color-accent-subtle: rgba(130, 89, 22, 0.06);
+  --color-accent-border: rgba(130, 89, 22, 0.4);
+}
+
+[data-theme="minimalist-modern"] {
+  --color-accent: #6E7E91;
+  --color-accent-hover: #58677A;
+  --color-accent-soft: rgba(110, 126, 145, 0.15);
+  --color-accent-subtle: rgba(110, 126, 145, 0.06);
+  --color-accent-border: rgba(110, 126, 145, 0.35);
+}
+
+[data-theme="classic-luxury"] {
+  --color-accent: #825916;
+  --color-accent-hover: #6B480F;
+  --color-accent-soft: rgba(130, 89, 22, 0.14);
+  --color-accent-subtle: rgba(130, 89, 22, 0.06);
+  --color-accent-border: rgba(130, 89, 22, 0.4);
+}
+
+[data-theme="japanese-zen"] {
+  --color-accent: #2E343B;
+  --color-accent-hover: #1E2328;
+  --color-accent-soft: rgba(46, 52, 59, 0.18);
+  --color-accent-subtle: rgba(46, 52, 59, 0.06);
+  --color-accent-border: rgba(46, 52, 59, 0.35);
+}
+
+/* Editorial typography & styling */
+.font-serif-display {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAEFF1;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9BBA9;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AE8A4E;
+}
+
+/* Magazine grid rules */
+.editorial-border-b {
+  border-bottom: 1px solid rgba(216, 208, 195, 0.45);
+}
+.editorial-border-t {
+  border-top: 1px solid rgba(216, 208, 195, 0.45);
+}
+.editorial-border-r {
+  border-right: 1px solid rgba(216, 208, 195, 0.45);
+}
+.editorial-border-l {
+  border-left: 1px solid rgba(216, 208, 195, 0.45);
+}

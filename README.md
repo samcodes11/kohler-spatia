@@ -2,7 +2,8 @@
 
 > **Concept Case Study Note**: This is a CONCEPT / CASE STUDY project referencing Kohler for portfolio purposes only — not an official Kohler product.
 > *"Concept case study — not affiliated with Kohler Co."*
-
+   ## Video Demo
+   [Watch the walkthrough](https://drive.google.com/file/d/18WCz8PXwN88g1LjfUgw6cQtHFZsRjiBE/view?usp=sharing)
 ---
 
 ## Brand & Design System

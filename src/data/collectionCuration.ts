@@ -245,5 +245,7 @@ export const CURATED_COLLECTIONS: Record<SubThemeId, CuratedCollection> = {
 export const ORDERED_COLLECTION_IDS: SubThemeId[] = [
   'minimalist-modern',
   'luxury-escape',
-  'nature-retreat'
+  'nature-retreat',
+  'coastal-breeze',
+  'urban-chic'
 ];

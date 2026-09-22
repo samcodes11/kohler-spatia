@@ -4,6 +4,7 @@ import { PRODUCTS, PRODUCT_MAP, ProductCategory, ProductItem } from '../data/pro
 import { WALL_FINISHES } from '../data/productVisuals3D';
 import { THEMES } from '../data/themes';
 import { ASSET_MAP } from '../data/assets';
+import { getPersonalizedStyleDriftWarning } from '../services/designEngine';
 import { ProductVisual } from '../components/ui/ProductVisual';
 import { useCartWishlist } from '../context/CartWishlistContext';
 import { 
@@ -560,7 +561,7 @@ export const ConfiguratorStep2: React.FC<Step2Props> = ({ onBack, onNext }) => {
                               <AlertTriangle size={11} /> Style Drift Warning
                             </div>
                             <p className="leading-snug text-stone-light">
-                              <strong className="text-white font-serif">{product.name}</strong> ({product.finishName}) departs from your <strong className="text-accent">{themeDef.name}</strong> palette ({themeDef.finishes}). Consider a {themeDef.name}-fit alternative.
+                              {getPersonalizedStyleDriftWarning(product, selectedTheme)}
                             </p>
                           </div>
                         </div>

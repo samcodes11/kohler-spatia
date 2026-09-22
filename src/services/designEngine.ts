@@ -212,9 +212,7 @@ export function calculateDesignAssessment(
   selectedProducts.forEach(prod => {
     if (!prod.themeFit.includes(theme)) {
       styleDriftPoints += 12;
-      styleWarnings.push(
-        `${prod.name} (${prod.finishName}) departs from the ${themeDef.name} aesthetic standard (${themeDef.finishes}).`
-      );
+      styleWarnings.push(getPersonalizedStyleDriftWarning(prod, theme));
     }
   });
   const styleCompatibility = Math.max(40, 100 - styleDriftPoints);
@@ -401,4 +399,95 @@ export function calculateDesignAssessment(
     styleWarnings,
     recommendations
   };
+}
+
+/**
+ * Generates personalized, product-specific and theme-specific Style Drift Warning messages
+ */
+export function getPersonalizedStyleDriftWarning(
+  product: ProductItem,
+  themeId: string
+): string {
+  const themeDef = THEMES[themeId] || THEMES['classic-luxury'] || THEMES['minimalist-modern'];
+  const themeName = themeDef?.name || 'selected theme';
+  const finish = product.finishName || 'Standard Finish';
+  const categoryLabel = 
+    product.category === 'faucet' ? 'Faucet' :
+    product.category === 'toilet' ? 'Smart Toilet' :
+    product.category === 'shower' ? 'Thermostatic Shower' :
+    product.category === 'vanity' ? 'Vanity' : 'Fixture';
+
+  if (product.category === 'faucet') {
+    if (themeId === 'minimalist-modern') {
+      return `The ${finish} finish on ${product.name} introduces ornate curves and warm metallic tones that contrast with Minimalist Modern's crisp monochrome chrome geometry.`;
+    }
+    if (themeId === 'classic-luxury' || themeId === 'luxury-escape') {
+      return `The stark minimalist profile of ${product.name} (${finish}) lacks the sculpted heraldic handles and rich French Gold metallurgy expected in Classic Luxury suites.`;
+    }
+    if (themeId === 'japanese-zen' || themeId === 'nature-retreat') {
+      return `The high-gloss metallic sheen of ${product.name} (${finish}) disrupts the quiet, organic bas-relief and tactile dark cedar aesthetic of Japanese Zen.`;
+    }
+    if (themeId === 'coastal-breeze') {
+      return `The heavy industrial weight of ${product.name} (${finish}) clashes with Coastal Breeze's sun-bleached oak and airy seafoam undertones.`;
+    }
+    if (themeId === 'urban-chic') {
+      return `The polished traditional ornamentation of ${product.name} (${finish}) conflicts with Urban Chic's raw microcement and knurled matte black loft silhouette.`;
+    }
+  }
+
+  if (product.category === 'toilet') {
+    if (themeId === 'minimalist-modern') {
+      return `The traditional exposed tank and ornate trim of ${product.name} (${finish}) break the seamless cantilevered wall-hung sightlines of Minimalist Modern.`;
+    }
+    if (themeId === 'classic-luxury' || themeId === 'luxury-escape') {
+      return `The ultra-compact monolithic ceramic design of ${product.name} lacks the classic molding and gold accent detailing required for Classic Luxury suites.`;
+    }
+    if (themeId === 'japanese-zen' || themeId === 'nature-retreat') {
+      return `The reflective metallic elements on ${product.name} (${finish}) diverge from Japanese Zen's matte basalt stone and muted organic palette.`;
+    }
+    if (themeId === 'coastal-breeze') {
+      return `The dark, heavy industrial profile of ${product.name} (${finish}) contrasts with the light, airy limestone and driftwood theme of Coastal Breeze.`;
+    }
+    if (themeId === 'urban-chic') {
+      return `The traditional soft-curved porcelain silhouette of ${product.name} departs from the crisp geometric terracotta fluting of Urban Chic.`;
+    }
+  }
+
+  if (product.category === 'shower') {
+    if (themeId === 'minimalist-modern') {
+      return `The exposed decorative riser and traditional cross-handles of ${product.name} (${finish}) disrupt Minimalist Modern's flush architectural rainhead alignment.`;
+    }
+    if (themeId === 'classic-luxury' || themeId === 'luxury-escape') {
+      return `The digital glass touch-panel on ${product.name} feels overly clinical against Classic Luxury's bookmatched Calacatta marble and French Gold hardware.`;
+    }
+    if (themeId === 'japanese-zen' || themeId === 'nature-retreat') {
+      return `The mirror-polished chrome trim of ${product.name} (${finish}) creates harsh visual reflections against Japanese Zen's serene Hinoki cypress and basalt.`;
+    }
+    if (themeId === 'coastal-breeze') {
+      return `The heavy matte black armature of ${product.name} (${finish}) darkens the sunlit, breezy maritime atmosphere of Coastal Breeze.`;
+    }
+    if (themeId === 'urban-chic') {
+      return `The delicate heritage porcelain valves on ${product.name} conflict with the industrial loft aesthetic and exposed concrete of Urban Chic.`;
+    }
+  }
+
+  if (product.category === 'vanity') {
+    if (themeId === 'minimalist-modern') {
+      return `The detailed woodwork and brass pulls of ${product.name} (${finish}) depart from Minimalist Modern's handleless floating monolithic cabinets.`;
+    }
+    if (themeId === 'classic-luxury' || themeId === 'luxury-escape') {
+      return `The raw industrial microcement finish of ${product.name} lacks the opulent Calacatta marble countertop and gold trim expected in Classic Luxury.`;
+    }
+    if (themeId === 'japanese-zen' || themeId === 'nature-retreat') {
+      return `The high-gloss lacquer and synthetic sheen of ${product.name} (${finish}) clash with the tactile Hinoki cypress and flamed stone of Japanese Zen.`;
+    }
+    if (themeId === 'coastal-breeze') {
+      return `The dark graphite slate tone of ${product.name} (${finish}) overrides the sun-bleached driftwood and light limestone palette of Coastal Breeze.`;
+    }
+    if (themeId === 'urban-chic') {
+      return `The classic French molding on ${product.name} contrasts with Urban Chic's terracotta clay tiles and raw structural steel framing.`;
+    }
+  }
+
+  return `${product.name} (${finish}) ${categoryLabel.toLowerCase()} departs from your ${themeName} palette (${themeDef.finishes}). Finish and form diverge from the ${themeName} aesthetic.`;
 }

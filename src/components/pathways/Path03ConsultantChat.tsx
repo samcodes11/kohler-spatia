@@ -167,7 +167,7 @@ className="w-full text-left p-4 sm:p-5 bg-porcelain/40 hover:bg-porcelain-warm b
 
 <div className="space-y-2">
 <h3 className="font-serif text-2xl sm:text-3xl text-ink font-bold">
-Tailored Architecture: {answers.finishTone === 'black' ? 'Nature Retreat Sanctuary' : answers.finishTone === 'gold' ? 'Luxury Escape Pavilion' : 'Minimalist Precision Bath'}
+Tailored Architecture: {answers.finishTone === 'black' ? 'Japanese Zen Sanctuary' : answers.finishTone === 'gold' ? 'Classic Luxury Pavilion' : 'Minimalist Precision Bath'}
 </h3>
 <p className="text-base text-stone-dark font-medium leading-relaxed">
 Based on your stated desire for <span className="text-ink font-bold">{answers.waterRitual}</span> hydrotherapy, <span className="text-ink font-bold">{answers.finishTone}</span> metallurgy, and your investment target of <span className="text-ink font-bold">₹{parseInt(answers.budgetComfort || '400000').toLocaleString('en-IN')}</span>, the AI Designer has synthesized a foundational suite:

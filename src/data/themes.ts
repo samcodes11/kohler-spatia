@@ -38,7 +38,9 @@ export interface ThemeDefinition {
 export const CANONICAL_THEME_IDS: ThemeId[] = [
   'minimalist-modern',
   'classic-luxury',
-  'japanese-zen'
+  'japanese-zen',
+  'coastal-breeze',
+  'urban-chic'
 ];
 
 export const THEMES: Record<string, ThemeDefinition> = {
@@ -123,6 +125,60 @@ export const THEMES: Record<string, ThemeDefinition> = {
     }
   },
 
+  // 4. Coastal Breeze
+  'coastal-breeze': {
+    id: 'coastal-breeze',
+    name: 'Coastal Breeze',
+    finishes: 'Vibrant Brushed Nickel / Bleached Oak',
+    tone: 'Airy seafoam azure tone',
+    accentColor: '#5B8A99',
+    accentHover: '#47707E',
+    accentSoft: 'rgba(91, 138, 153, 0.15)',
+    description: 'Driftwood oak, honed limestone, and seafoam tones capture breezy seaside calm.',
+    tagline: 'Effortless coastal lightness with airy maritime fluidity.',
+    lightingTemp: '3500K Fresh Morning Daylight',
+    wallTexture: 'Glazed Zellige Subway Tile & Limewash',
+    floorTexture: 'Honed Seafoam Limestone',
+    imageUrl: ASSET_MAP.themes['coastal-breeze'],
+    previewImage: ASSET_MAP.themes['coastal-breeze'],
+    recommendedFixtures: {
+      shower: 'shower-rainpanel',
+      toilet: 'toilet-wallhung',
+      faucet: 'faucet-singlelever',
+      lighting: 'light-downlight',
+      flooring: 'floor-mattestone',
+      vanity: 'vanity-floating',
+      extras: ['extra-mirror', 'extra-glass']
+    }
+  },
+
+  // 5. Urban Chic
+  'urban-chic': {
+    id: 'urban-chic',
+    name: 'Urban Chic',
+    finishes: 'Matte Black / Fluted Terracotta',
+    tone: 'Warm terracotta & matte black tone',
+    accentColor: '#9C5843',
+    accentHover: '#814634',
+    accentSoft: 'rgba(156, 88, 67, 0.15)',
+    description: 'Terracotta fluting, raw microcement, and matte black accents deliver modern loft energy.',
+    tagline: 'Tactile earth tones meet a crisp industrial metropolitan silhouette.',
+    lightingTemp: '3000K Balanced Editorial Warmth',
+    wallTexture: 'Terracotta Fluted Clay & Exposed Microcement',
+    floorTexture: 'Warm Terrazzo with Amber Aggregate',
+    imageUrl: ASSET_MAP.themes['urban-chic'],
+    previewImage: ASSET_MAP.themes['urban-chic'],
+    recommendedFixtures: {
+      shower: 'shower-digital',
+      toilet: 'toilet-wallhung',
+      faucet: 'faucet-wallmount',
+      lighting: 'light-backlit',
+      flooring: 'floor-terrazzo',
+      vanity: 'vanity-floating',
+      extras: ['extra-mirror', 'extra-ventilation']
+    }
+  },
+
   // Legacy mappings & aliases for backwards-compatibility
   'luxury-escape': {
     id: 'luxury-escape',
@@ -171,56 +227,6 @@ export const THEMES: Record<string, ThemeDefinition> = {
       lighting: 'light-cove',
       flooring: 'floor-woodtile',
       vanity: 'vanity-freestanding',
-      extras: ['extra-mirror', 'extra-ventilation']
-    }
-  },
-  'coastal-breeze': {
-    id: 'coastal-breeze',
-    name: 'Minimalist Modern',
-    finishes: 'Vibrant Brushed Nickel / Bleached Oak',
-    tone: 'Airy seafoam azure tone',
-    accentColor: '#5B8A99',
-    accentHover: '#47707E',
-    accentSoft: 'rgba(91, 138, 153, 0.15)',
-    description: 'Driftwood oak, honed limestone, and seafoam tones capture breezy seaside calm.',
-    tagline: 'Effortless coastal lightness with airy maritime fluidity.',
-    lightingTemp: '3500K Fresh Morning Daylight',
-    wallTexture: 'Glazed Zellige Subway Tile & Limewash',
-    floorTexture: 'Honed Seafoam Limestone',
-    imageUrl: ASSET_MAP.themes['coastal-breeze'],
-    previewImage: ASSET_MAP.themes['coastal-breeze'],
-    recommendedFixtures: {
-      shower: 'shower-rainpanel',
-      toilet: 'toilet-wallhung',
-      faucet: 'faucet-singlelever',
-      lighting: 'light-downlight',
-      flooring: 'floor-mattestone',
-      vanity: 'vanity-floating',
-      extras: ['extra-mirror', 'extra-glass']
-    }
-  },
-  'urban-chic': {
-    id: 'urban-chic',
-    name: 'Minimalist Modern',
-    finishes: 'Matte Black / Fluted Terracotta',
-    tone: 'Warm terracotta & matte black tone',
-    accentColor: '#9C5843',
-    accentHover: '#814634',
-    accentSoft: 'rgba(156, 88, 67, 0.15)',
-    description: 'Terracotta fluting, raw microcement, and matte black accents deliver modern loft energy.',
-    tagline: 'Tactile earth tones meet a crisp industrial metropolitan silhouette.',
-    lightingTemp: '3000K Balanced Editorial Warmth',
-    wallTexture: 'Terracotta Fluted Clay & Exposed Microcement',
-    floorTexture: 'Warm Terrazzo with Amber Aggregate',
-    imageUrl: ASSET_MAP.themes['urban-chic'],
-    previewImage: ASSET_MAP.themes['urban-chic'],
-    recommendedFixtures: {
-      shower: 'shower-digital',
-      toilet: 'toilet-wallhung',
-      faucet: 'faucet-wallmount',
-      lighting: 'light-backlit',
-      flooring: 'floor-terrazzo',
-      vanity: 'vanity-floating',
       extras: ['extra-mirror', 'extra-ventilation']
     }
   }

@@ -238,7 +238,7 @@ Architectural Narratives
 </span>
 </div>
 <h2 className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-ink">
-Three Finish Worlds
+Five Finish Worlds
 </h2>
 </div>
 <span className="text-base font-mono text-ink font-semibold hidden sm:inline">
@@ -246,7 +246,7 @@ Curated material palettes engineered for timeless spatial harmony
 </span>
 </div>
 
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
 {[
 {
 id: 'minimalist-modern',
@@ -271,6 +271,22 @@ finishes: 'Matte Black & Smoked Hinoki Oak',
 desc: 'Biophilic timber tactility, submerged soaking proportions, and calming ritual hydrotherapy.',
 image: IMAGE_MAP['theme-nature-retreat'] || ASSET_MAP.homepage.finishWorlds.japaneseZen,
 number: '03'
+},
+{
+id: 'coastal-breeze',
+name: 'Coastal Breeze',
+finishes: 'Brushed Nickel & Bleached Oak',
+desc: 'Driftwood oak, honed limestone, and seafoam tones capture breezy seaside calm.',
+image: IMAGE_MAP['theme-coastal-breeze'] || ASSET_MAP.themes['coastal-breeze'],
+number: '04'
+},
+{
+id: 'urban-chic',
+name: 'Urban Chic',
+finishes: 'Matte Black & Fluted Terracotta',
+desc: 'Terracotta fluting, raw microcement, and matte black accents deliver modern loft energy.',
+image: IMAGE_MAP['theme-urban-chic'] || ASSET_MAP.themes['urban-chic'],
+number: '05'
 }
 ].map((world) => (
 <div

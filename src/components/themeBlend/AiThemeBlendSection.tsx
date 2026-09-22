@@ -21,8 +21,17 @@ export const AiThemeBlendSection: React.FC<AiThemeBlendSectionProps> = ({ onStar
   const [activeBlend, setActiveBlend] = useState<ThemeBlend | null>(null);
   const [imageLoadError, setImageLoadError] = useState(false);
 
-  // 3 Canonical Theme Worlds
+  // 5 Canonical C16 Theme Worlds
   const themeSwatches = [
+    {
+      id: 'japanese-zen' as ThemeId,
+      name: 'Japanese Zen',
+      tagline: 'Biophilic Spa Sanctuary',
+      finishes: 'Brushed Bronze · Fluted Hinoki · Basalt',
+      image: ASSET_MAP.themes['nature-retreat'],
+      accentColor: '#4A6B52',
+      tone: 'Restorative organic warmth and calm'
+    },
     {
       id: 'minimalist-modern' as ThemeId,
       name: 'Minimalist Modern',
@@ -42,13 +51,22 @@ export const AiThemeBlendSection: React.FC<AiThemeBlendSectionProps> = ({ onStar
       tone: 'Opulent Calacatta and warm amber glow'
     },
     {
-      id: 'japanese-zen' as ThemeId,
-      name: 'Japanese Zen',
-      tagline: 'Biophilic Spa Sanctuary',
-      finishes: 'Brushed Bronze · Fluted Hinoki · Basalt',
-      image: ASSET_MAP.themes['nature-retreat'],
-      accentColor: '#4A6B52',
-      tone: 'Restorative organic warmth and calm'
+      id: 'coastal-breeze' as ThemeId,
+      name: 'Coastal Breeze',
+      tagline: 'Airy Seaside Fluidity',
+      finishes: 'Brushed Nickel · Bleached Oak · Zellige',
+      image: ASSET_MAP.themes['coastal-breeze'],
+      accentColor: '#5B8A99',
+      tone: 'Breezy driftwood and seafoam lightness'
+    },
+    {
+      id: 'urban-chic' as ThemeId,
+      name: 'Urban Chic',
+      tagline: 'Loft Terracotta & Steel',
+      finishes: 'Matte Black · Fluted Clay · Raw Terrazzo',
+      image: ASSET_MAP.themes['urban-chic'],
+      accentColor: '#9C5843',
+      tone: 'Tactile earthiness and industrial silhouette'
     }
   ];
 

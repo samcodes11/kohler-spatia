@@ -69,11 +69,11 @@ export function getBlendId(themeA: string, themeB: string): string {
 }
 
 export const THEME_BLENDS: ThemeBlend[] = [
-  // 1. Nature Retreat × Modern Minimalist
+  // 1. Japanese Zen × Minimalist Modern
   {
     id: 'nature-retreat__minimalist-modern',
     themeIds: ['nature-retreat', 'minimalist-modern'],
-    title: 'Nature Retreat × Modern Minimalist',
+    title: 'Japanese Zen × Minimalist Modern',
     imageUrl: ASSET_MAP.themeBlends['nature-retreat__minimalist-modern'],
     hasVisualPreview: true,
     conceptNote: 'Monolithic concrete architecture, central skylight, vertical garden, sage accents, pale oak, extremely clean geometry and restrained Zen minimalism.',
@@ -96,11 +96,11 @@ export const THEME_BLENDS: ThemeBlend[] = [
     }
   },
 
-  // 2. Nature Retreat × Luxury Escape
+  // 2. Japanese Zen × Classic Luxury
   {
     id: 'nature-retreat__luxury-escape',
     themeIds: ['nature-retreat', 'luxury-escape'],
-    title: 'Nature Retreat × Luxury Escape',
+    title: 'Japanese Zen × Classic Luxury',
     imageUrl: ASSET_MAP.themeBlends['nature-retreat__luxury-escape'],
     hasVisualPreview: true,
     conceptNote: 'Dramatic private jungle estate, stone architecture, deep greens, dark materials, moss, sculptural bathing environment and immersive luxury.',
@@ -108,14 +108,14 @@ export const THEME_BLENDS: ThemeBlend[] = [
     designDirection: {
       primaryTheme: 'luxury-escape',
       wallFinish: 'warm-putty',
-      palette: 'Deep botanical emerald, bookmatched Calacatta, and heirloom French Gold',
-      materialDirection: 'Living moss-textured stone walls, honed basalt slabs, and bullion brass hardware',
+      palette: 'Deep forest greens, tactile flamed basalt, and rich bullion gold accents',
+      materialDirection: 'Submerged natural stone, bookmatched marble, and handcrafted gold brassware',
       lightingTemp: '2700K Warm Luminescent Amber',
-      fixtureCharacter: 'Sculptural soaking silhouettes and tactile brushed bronze levers',
+      fixtureCharacter: 'Sculptural brassware and integrated stone wellness controls',
       recommendedFixtures: {
         shower: 'shower-thermostatic',
         toilet: 'toilet-smart',
-        vanity: 'vanity-doublebasin',
+        vanity: 'vanity-freestanding',
         faucet: 'faucet-bridge',
         lighting: 'light-cove',
         flooring: 'floor-marble'
@@ -123,76 +123,76 @@ export const THEME_BLENDS: ThemeBlend[] = [
     }
   },
 
-  // 3. Nature Retreat × Coastal Breeze
+  // 3. Japanese Zen × Coastal Breeze
   {
     id: 'nature-retreat__coastal-breeze',
     themeIds: ['nature-retreat', 'coastal-breeze'],
-    title: 'Nature Retreat × Coastal Breeze',
+    title: 'Japanese Zen × Coastal Breeze',
     imageUrl: ASSET_MAP.themeBlends['nature-retreat__coastal-breeze'],
     hasVisualPreview: true,
-    conceptNote: 'Open-air tropical/coastal pavilion with natural architecture, pale limestone, seafoam/aqua, light oak, plants, reflecting water, arched openings and bright natural daylight.',
-    oneSentenceDescription: 'Open-air pavilion architecture with pale limestone and breezy aqua waters calms the senses.',
+    conceptNote: 'Sunlit spa pavilion, translucent linen curtains, bleached Hinoki wood, seafoam plaster, and relaxed coastal greenery.',
+    oneSentenceDescription: 'Airy seafoam plaster and bleached Hinoki wood bring breezy maritime calm to Zen hydrotherapy.',
     designDirection: {
       primaryTheme: 'coastal-breeze',
-      wallFinish: 'limewash-greige',
-      palette: 'Soft seafoam, pale limestone, washed linen, and brushed nickel',
-      materialDirection: 'Honed travertine floor, glazed zellige subway tile, and drift oak cabinetry',
-      lightingTemp: '3500K Fresh Morning Daylight',
-      fixtureCharacter: 'Curved arch motifs, open-air shower drainage, and fluid single-lever brassware',
+      wallFinish: 'limestone-greige',
+      palette: 'Pale seafoam green, sand beige, and bleached cedar',
+      materialDirection: 'Glazed zellige tiles with brushed nickel and natural timber',
+      lightingTemp: '3200K Soft Sunlit Morning',
+      fixtureCharacter: 'Soft-curved organic spouts and tactile timber cabinetry',
       recommendedFixtures: {
         shower: 'shower-rainpanel',
         toilet: 'toilet-wallhung',
         vanity: 'vanity-floating',
         faucet: 'faucet-singlelever',
         lighting: 'light-downlight',
-        flooring: 'floor-mattestone'
+        flooring: 'floor-woodtile'
       }
     }
   },
 
-  // 4. Nature Retreat × Urban Chic (Preserved with graceful preview fallback state)
+  // 4. Japanese Zen × Urban Chic
   {
     id: 'nature-retreat__urban-chic',
     themeIds: ['nature-retreat', 'urban-chic'],
-    title: 'Nature Retreat × Urban Chic',
-    imageUrl: undefined,
-    hasVisualPreview: false,
-    conceptNote: 'Warm terracotta fluting, raw cedar textures, exposed concrete, and industrial matte black silhouettes.',
-    oneSentenceDescription: 'Warm terracotta fluting and tactile cedar earthiness ground a crisp metropolitan silhouette.',
+    title: 'Japanese Zen × Urban Chic',
+    imageUrl: ASSET_MAP.themeBlends['nature-retreat__urban-chic'],
+    hasVisualPreview: true,
+    conceptNote: 'Subterranean luxury loft spa, charred Shou Sugi Ban timber walls, terracotta fluting, matte black industrial fixtures, and mood lighting.',
+    oneSentenceDescription: 'Charred timber and fluted clay merge industrial loft edge with serene Japanese spa quietude.',
     designDirection: {
-      primaryTheme: 'urban-chic',
-      wallFinish: 'warm-putty',
-      palette: 'Warm terracotta clay, charcoal basalt, cedar woodgrain, and matte black',
-      materialDirection: 'Fluted architectural terracotta tile, cast concrete basins, and blackened steel',
-      lightingTemp: '3000K Editorial Amber Glow',
-      fixtureCharacter: 'Industrial knurled handles, matte black wall mounts, and raw tactile surfaces',
+      primaryTheme: 'japanese-zen',
+      wallFinish: 'slate-graphite',
+      palette: 'Charcoal graphite, warm terracotta, and knurled matte black',
+      materialDirection: 'Fluted clay tile, exposed aggregate concrete, and smoked metal',
+      lightingTemp: '3000K Editorial Low-Glow Warmth',
+      fixtureCharacter: 'Knurled matte black valves and concealed architectural drainage',
       recommendedFixtures: {
-        shower: 'shower-digital',
+        shower: 'shower-steam',
         toilet: 'toilet-wallhung',
-        vanity: 'vanity-freestanding',
+        vanity: 'vanity-doublebasin',
         faucet: 'faucet-wallmount',
-        lighting: 'light-backlit',
+        lighting: 'light-cove',
         flooring: 'floor-terrazzo'
       }
     }
   },
 
-  // 5. Modern Minimalist × Luxury Escape
+  // 5. Minimalist Modern × Classic Luxury
   {
     id: 'minimalist-modern__luxury-escape',
     themeIds: ['minimalist-modern', 'luxury-escape'],
-    title: 'Modern Minimalist × Luxury Escape',
+    title: 'Minimalist Modern × Classic Luxury',
     imageUrl: ASSET_MAP.themeBlends['minimalist-modern__luxury-escape'],
     hasVisualPreview: true,
-    conceptNote: 'Ultra-modern luxury bathroom, ivory and graphite palette, smoked glass, architectural symmetry, floating platforms, dramatic linear lighting and gallery-like geometry.',
-    oneSentenceDescription: 'Architectural symmetry, smoked glass, and floating ivory platforms elevate minimalism to grand luxury.',
+    conceptNote: 'Sharp geometric pavilion, floor-to-ceiling Calacatta slab, brushed gold linear trims, frameless glass, and tailored opulence.',
+    oneSentenceDescription: 'Ultra-clean geometric glass and microcement elevated by French Gold and Calacatta marble.',
     designDirection: {
       primaryTheme: 'luxury-escape',
       wallFinish: 'pure-alabaster',
-      palette: 'Polished ivory alabaster, graphite Nero Marquina, and French Gold accent lines',
-      materialDirection: 'Bookmatched porcelain slabs, floor-to-ceiling smoked acoustic glass, and mirror brass trims',
-      lightingTemp: '3000K Perimeter Concealed Linear Cove',
-      fixtureCharacter: 'Monolithic floating consoles, integrated smart bidets, and concealed thermostatic valves',
+      palette: 'Crisp alabaster white, polished Calacatta gold, and brushed French gold',
+      materialDirection: 'Bookmatched marble slabs framed by razor-thin chrome and gold profiles',
+      lightingTemp: '3000K Pure Luminescent Glow',
+      fixtureCharacter: 'Planar waterfall outlets in warm gold PVD finish',
       recommendedFixtures: {
         shower: 'shower-thermostatic',
         toilet: 'toilet-smart',
@@ -204,103 +204,76 @@ export const THEME_BLENDS: ThemeBlend[] = [
     }
   },
 
-  // 6. Modern Minimalist × Coastal Breeze (Preserved with graceful preview fallback state)
+  // 6. Minimalist Modern × Coastal Breeze
   {
     id: 'minimalist-modern__coastal-breeze',
     themeIds: ['minimalist-modern', 'coastal-breeze'],
-    title: 'Modern Minimalist × Coastal Breeze',
-    imageUrl: undefined,
-    hasVisualPreview: false,
-    conceptNote: 'Restrained Nordic lines, pale natural light, and serene maritime clarity.',
-    oneSentenceDescription: 'Restrained Nordic geometry and pale natural light frame refreshing maritime clarity.',
+    title: 'Minimalist Modern × Coastal Breeze',
+    imageUrl: ASSET_MAP.themeBlends['minimalist-modern__coastal-breeze'],
+    hasVisualPreview: true,
+    conceptNote: 'Breezy minimalist oceanfront suite, large-format limestone floor, floating vanity, brushed nickel, and shadowless lighting.',
+    oneSentenceDescription: 'Monochrome spatial clarity softened by coastal limestone and brushed nickel.',
     designDirection: {
       primaryTheme: 'minimalist-modern',
-      wallFinish: 'limewash-greige',
-      palette: 'Pale bleached birch, ocean grey, brushed stainless steel, and soft white',
-      materialDirection: 'Smooth microcement, sandblasted glass partitions, and honed limestone floors',
-      lightingTemp: '4000K Crisp Coastal Daylight',
-      fixtureCharacter: 'Ultra-slim vanity profiles, concealed drains, and single-lever chrome mixers',
+      wallFinish: 'pure-alabaster',
+      palette: 'Soft seafoam white, cool greige, and brushed nickel',
+      materialDirection: 'Large format porcelain tiles and frameless glass enclosures',
+      lightingTemp: '3800K Crisp Coastal Daylight',
+      fixtureCharacter: 'Ultra-slim monobloc mixers and concealed shower valves',
       recommendedFixtures: {
-        shower: 'shower-rainpanel',
+        shower: 'shower-digital',
         toilet: 'toilet-wallhung',
         vanity: 'vanity-floating',
         faucet: 'faucet-singlelever',
-        lighting: 'light-downlight',
+        lighting: 'light-backlit',
         flooring: 'floor-mattestone'
       }
     }
   },
 
-  // 7. Modern Minimalist × Urban Chic
+  // 7. Minimalist Modern × Urban Chic
   {
     id: 'minimalist-modern__urban-chic',
     themeIds: ['minimalist-modern', 'urban-chic'],
-    title: 'Modern Minimalist × Urban Chic',
+    title: 'Minimalist Modern × Urban Chic',
     imageUrl: ASSET_MAP.themeBlends['minimalist-modern__urban-chic'],
     hasVisualPreview: true,
-    conceptNote: 'Contemporary Manhattan penthouse, concrete, charcoal terrazzo, walnut, steel-framed windows, dark city skyline, sculptural black tub and metropolitan architecture.',
-    oneSentenceDescription: 'Sculptural black fixtures, charcoal terrazzo, and walnut accents define an uncompromising metropolitan silhouette.',
+    conceptNote: 'Architectural gallery loft, polished microcement floor, terracotta feature wall, matte black accent trim, and linear cove lighting.',
+    oneSentenceDescription: 'Crisp architectural lines meet warm terracotta clay and industrial matte black accents.',
     designDirection: {
-      primaryTheme: 'urban-chic',
+      primaryTheme: 'minimalist-modern',
       wallFinish: 'slate-graphite',
-      palette: 'Metropolitan charcoal, raw board-formed concrete, warm American walnut, and matte black',
-      materialDirection: 'Large-format terrazzo tiles with dark aggregate, blackened steel framing, and rift walnut cabinetry',
-      lightingTemp: '3000K Editorial Linear Warmth',
-      fixtureCharacter: 'Angular matte black mixers, wall-hung carrier bowls, and dark frameless glass screens',
+      palette: 'Raw concrete grey, warm rust terracotta, and matte black',
+      materialDirection: 'Microcement walls paired with terracotta fluting and steel accents',
+      lightingTemp: '3500K Architectural Neutral',
+      fixtureCharacter: 'Minimalist wall-mounted spouts with knurled industrial details',
       recommendedFixtures: {
         shower: 'shower-digital',
         toilet: 'toilet-wallhung',
         vanity: 'vanity-floating',
         faucet: 'faucet-wallmount',
         lighting: 'light-backlit',
-        flooring: 'floor-concrete'
+        flooring: 'floor-terrazzo'
       }
     }
   },
 
-  // 8. Luxury Escape × Coastal Breeze
+  // 8. Classic Luxury × Coastal Breeze
   {
     id: 'luxury-escape__coastal-breeze',
     themeIds: ['luxury-escape', 'coastal-breeze'],
-    title: 'Luxury Escape × Coastal Breeze',
+    title: 'Classic Luxury × Coastal Breeze',
     imageUrl: ASSET_MAP.themeBlends['luxury-escape__coastal-breeze'],
     hasVisualPreview: true,
-    conceptNote: 'Sun-washed Mediterranean villa, arched architecture, terracotta, blue ceramic details, cream plaster, sea view and warm afternoon light.',
-    oneSentenceDescription: 'Sun-washed Mediterranean arches, cream plaster, and ceramic accents bring effortless Riviera luxury to life.',
+    conceptNote: 'Mediterranean coastal villa, honed seafoam limestone, brushed French Gold fixtures, driftwood oak vanity, and warm ambient sunlight.',
+    oneSentenceDescription: 'Mediterranean resort opulence blending French Gold metallics with breezy coastal timber.',
     designDirection: {
       primaryTheme: 'luxury-escape',
-      wallFinish: 'pure-alabaster',
-      palette: 'Warm ivory plaster, Mediterranean cobalt ceramic, terracotta accents, and brushed French Gold',
-      materialDirection: 'Handmade terracotta pavers, glazed majolica tiles, and honed marble counters',
-      lightingTemp: '3000K Golden Riviera Sunburst',
-      fixtureCharacter: 'Sweeping arched mirrors, twin vessel basins, and classical gold bridge fittings',
-      recommendedFixtures: {
-        shower: 'shower-thermostatic',
-        toilet: 'toilet-smart',
-        vanity: 'vanity-doublebasin',
-        faucet: 'faucet-bridge',
-        lighting: 'light-downlight',
-        flooring: 'floor-marble'
-      }
-    }
-  },
-
-  // 9. Luxury Escape × Urban Chic
-  {
-    id: 'luxury-escape__urban-chic',
-    themeIds: ['luxury-escape', 'urban-chic'],
-    title: 'Luxury Escape × Urban Chic',
-    imageUrl: ASSET_MAP.themeBlends['luxury-escape__urban-chic'],
-    hasVisualPreview: true,
-    conceptNote: 'Art Deco penthouse, emerald marble, burgundy, black, antique gold, symmetrical geometry, fluted surfaces and theatrical lighting.',
-    oneSentenceDescription: 'Theatrical emerald marble and fluted antique gold ignite bold Art Deco metropolitan drama.',
-    designDirection: {
-      primaryTheme: 'luxury-escape',
-      wallFinish: 'slate-graphite',
-      palette: 'Deep Verde Guatemala emerald marble, blackened titanium, and antique brushed gold',
-      materialDirection: 'Polished bookmatched green marble, fluted walnut vanities, and gold inlay mouldings',
-      lightingTemp: '2700K Theatrical Amber Luminescence',
-      fixtureCharacter: 'Heavy faceted escutcheons, stepped architectural pedestals, and antique gold showers',
+      wallFinish: 'limestone-greige',
+      palette: 'Warm seafoam, bleached oak, and bullion gold',
+      materialDirection: 'Honed limestone paving paired with gold hardware and driftwood cabinetry',
+      lightingTemp: '3000K Soft Golden Hour Light',
+      fixtureCharacter: 'Heritage bridge faucets with refined coastal proportioning',
       recommendedFixtures: {
         shower: 'shower-thermostatic',
         toilet: 'toilet-smart',
@@ -312,6 +285,33 @@ export const THEME_BLENDS: ThemeBlend[] = [
     }
   },
 
+  // 9. Classic Luxury × Urban Chic
+  {
+    id: 'luxury-escape__urban-chic',
+    themeIds: ['luxury-escape', 'urban-chic'],
+    title: 'Classic Luxury × Urban Chic',
+    imageUrl: ASSET_MAP.themeBlends['luxury-escape__urban-chic'],
+    hasVisualPreview: true,
+    conceptNote: 'Metropolitan penthouse spa, Nero Marquina marble walls, fluted terracotta accents, brushed brass hardware, and dramatic pendant lighting.',
+    oneSentenceDescription: 'Dramatic Nero Marquina marble meets tactile terracotta and knurled brass in a penthouse loft.',
+    designDirection: {
+      primaryTheme: 'luxury-escape',
+      wallFinish: 'slate-graphite',
+      palette: 'Nero Marquina black, amber terracotta, and brushed brass',
+      materialDirection: 'Polished black marble paired with fluted clay and rich brassware',
+      lightingTemp: '2700K Low Ambient Amber',
+      fixtureCharacter: 'Substantial brass fixtures with industrial tactile knurling',
+      recommendedFixtures: {
+        shower: 'shower-thermostatic',
+        toilet: 'toilet-smart',
+        vanity: 'vanity-doublebasin',
+        faucet: 'faucet-bridge',
+        lighting: 'light-cove',
+        flooring: 'floor-terrazzo'
+      }
+    }
+  },
+
   // 10. Coastal Breeze × Urban Chic
   {
     id: 'coastal-breeze__urban-chic',
@@ -319,21 +319,21 @@ export const THEME_BLENDS: ThemeBlend[] = [
     title: 'Coastal Breeze × Urban Chic',
     imageUrl: ASSET_MAP.themeBlends['coastal-breeze__urban-chic'],
     hasVisualPreview: true,
-    conceptNote: 'Futuristic coastal-city penthouse with curved glass, cobalt blue, white, chrome, waterfront skyline and vivid twilight illumination.',
-    oneSentenceDescription: 'Futuristic curved glass, cobalt reflections, and twilight waterfront panoramas define coastal metropolitan luxury.',
+    conceptNote: 'Sun-drenched urban loft, light terrazzo pavers, terracotta fluting, brushed nickel hardware, and open airy sightlines.',
+    oneSentenceDescription: 'Sun-drenched terrazzo and brushed nickel combine breezy coastal lightness with loft vitality.',
     designDirection: {
       primaryTheme: 'coastal-breeze',
-      wallFinish: 'limewash-greige',
-      palette: 'Deep cobalt twilight, brushed stainless steel, crisp white lacquer, and oceanic cyan',
-      materialDirection: 'Curved structural glass dividers, honed grey terrazzo, and brushed chrome hardware',
-      lightingTemp: '3500K Twilight Horizon Luminescence',
-      fixtureCharacter: 'Aerodynamic cylindrical mixers, rainhead ceiling panels, and rimless wall-hung pans',
+      wallFinish: 'limestone-greige',
+      palette: 'Airy seafoam, warm terracotta, and brushed nickel',
+      materialDirection: 'Terrazzo paving with glazed subway tiles and nickel hardware',
+      lightingTemp: '3400K Bright Balanced Natural',
+      fixtureCharacter: 'Clean monobloc fixtures with subtle tactile texture',
       recommendedFixtures: {
         shower: 'shower-rainpanel',
         toilet: 'toilet-wallhung',
         vanity: 'vanity-floating',
         faucet: 'faucet-singlelever',
-        lighting: 'light-backlit',
+        lighting: 'light-downlight',
         flooring: 'floor-terrazzo'
       }
     }

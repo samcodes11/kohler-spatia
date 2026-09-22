@@ -131,31 +131,31 @@ productRecommendations: [PRODUCT_MAP['toilet-wallhung']]
 };
 }
 
-// 4. Luxury Escape styling
-if (q.includes('classic') || q.includes('luxury escape') || q.includes('french gold') || q.includes('bronze')) {
+// 4. Classic Luxury styling
+if (q.includes('classic') || q.includes('luxury') || q.includes('french gold') || q.includes('bronze')) {
 return {
 id: `ai-${Date.now()}`,
 sender: 'ai',
-text: `Luxury Escape flourishes when anchored by warm bullion metallics. The Bridge Faucet in Vibrant French Gold (₹42,000) paired with Calacatta Gold Honed Marble (₹52,000) creates heirloom permanence. I can apply the Luxury Escape finish palette to your workspace now.`,
+text: `Classic Luxury flourishes when anchored by warm bullion metallics. The Bridge Faucet in Vibrant French Gold (₹42,000) paired with Calacatta Gold Honed Marble (₹52,000) creates heirloom permanence. I can apply the Classic Luxury finish palette to your workspace now.`,
 timestamp: 'Just now',
 suggestedAction: {
-label: 'Switch to Luxury Escape Theme',
-action: () => setSelectedTheme('luxury-escape')
+label: 'Switch to Classic Luxury Theme',
+action: () => setSelectedTheme('classic-luxury')
 },
 productRecommendations: [PRODUCT_MAP['faucet-bridge'], PRODUCT_MAP['floor-marble']]
 };
 }
 
-// 5. Nature Retreat inquiry
-if (q.includes('zen') || q.includes('nature retreat') || q.includes('black') || q.includes('titanium')) {
+// 5. Japanese Zen inquiry
+if (q.includes('zen') || q.includes('japanese') || q.includes('nature') || q.includes('black') || q.includes('titanium')) {
 return {
 id: `ai-${Date.now()}`,
 sender: 'ai',
-text: `For Nature Retreat tranquility, we pair Thermal Basalt Stone (₹34,000) with in-wall Matte Black Mixers (₹28,000) and indirect 2700K Cove Lighting (₹15,000). This removes visual clutter from horizontal vanity planes.`,
+text: `For Japanese Zen tranquility, we pair Thermal Basalt Stone (₹34,000) with in-wall Matte Black Mixers (₹28,000) and indirect 2700K Cove Lighting (₹15,000). This removes visual clutter from horizontal vanity planes.`,
 timestamp: 'Just now',
 suggestedAction: {
-label: 'Switch to Nature Retreat Theme',
-action: () => setSelectedTheme('nature-retreat')
+label: 'Switch to Japanese Zen Theme',
+action: () => setSelectedTheme('japanese-zen')
 },
 productRecommendations: [PRODUCT_MAP['faucet-wallmount'], PRODUCT_MAP['light-cove']]
 };

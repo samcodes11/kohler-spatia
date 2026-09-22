@@ -109,12 +109,13 @@ export const ASSET_MAP = {
     'nature-retreat__coastal-breeze': 'https://res.cloudinary.com/uthcccj5/image/upload/v1789801713/ChatGPT_Image_Sep_19_2026_12_38_18_PM.png',
     'nature-retreat__minimalist-modern': 'https://res.cloudinary.com/uthcccj5/image/upload/v1789801760/ChatGPT_Image_Sep_19_2026_12_39_06_PM.png',
     'nature-retreat__luxury-escape': 'https://res.cloudinary.com/uthcccj5/image/upload/v1789801889/ChatGPT_Image_Sep_19_2026_12_41_13_PM.png',
+    'nature-retreat__urban-chic': 'https://res.cloudinary.com/uthcccj5/image/upload/v1789802020/ChatGPT_Image_Sep_19_2026_12_43_29_PM.png',
     'minimalist-modern__luxury-escape': 'https://res.cloudinary.com/uthcccj5/image/upload/v1789801966/ChatGPT_Image_Sep_19_2026_12_42_14_PM.png',
+    'minimalist-modern__coastal-breeze': 'https://res.cloudinary.com/uthcccj5/image/upload/v1789702629/ChatGPT_Image_Sep_18_2026_09_06_55_AM.png',
     'minimalist-modern__urban-chic': 'https://res.cloudinary.com/uthcccj5/image/upload/v1789802137/ChatGPT_Image_Sep_19_2026_12_45_25_PM.png',
     'luxury-escape__coastal-breeze': 'https://res.cloudinary.com/uthcccj5/image/upload/v1789802201/ChatGPT_Image_Sep_19_2026_12_46_24_PM.png',
     'luxury-escape__urban-chic': 'https://res.cloudinary.com/uthcccj5/image/upload/v1789802330/ChatGPT_Image_Sep_19_2026_12_48_29_PM.png',
     'coastal-breeze__urban-chic': 'https://res.cloudinary.com/uthcccj5/image/upload/v1789802478/ChatGPT_Image_Sep_19_2026_12_51_06_PM.png',
-    // Section 10 Reserve Locked Asset: preserved without assigning to an unverified pair
     'reserve-unmapped': 'https://res.cloudinary.com/uthcccj5/image/upload/v1789802020/ChatGPT_Image_Sep_19_2026_12_43_29_PM.png',
   },
 

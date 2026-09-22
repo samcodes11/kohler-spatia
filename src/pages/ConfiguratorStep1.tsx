@@ -666,7 +666,7 @@ export const ConfiguratorStep1: React.FC<Step1Props> = ({ onNext, onBack }) => {
             </p>
           </div>
 
-          {/* Theme Selection Box (3 Canonical Theme Worlds) */}
+          {/* Theme Selection Box (5 Theme Worlds) */}
           <div className="bg-white border-2 border-stone/25 rounded-sm p-6 sm:p-8 space-y-4 shadow-editorial">
             <div className="border-b border-stone/20 pb-4 flex items-center justify-between">
               <div>
@@ -676,7 +676,7 @@ export const ConfiguratorStep1: React.FC<Step1Props> = ({ onNext, onBack }) => {
                 </p>
               </div>
               <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-accent font-bold hidden sm:inline">
-                3 Worlds
+                5 Worlds
               </span>
             </div>
 
@@ -707,7 +707,7 @@ export const ConfiguratorStep1: React.FC<Step1Props> = ({ onNext, onBack }) => {
             )}
 
             <div className="space-y-3 pt-2">
-              {(['minimalist-modern', 'classic-luxury', 'japanese-zen'] as ThemeId[]).map(themeId => {
+              {(['minimalist-modern', 'classic-luxury', 'japanese-zen', 'coastal-breeze', 'urban-chic'] as ThemeId[]).map(themeId => {
                 const theme = THEMES[themeId];
                 if (!theme) return null;
                 const isSelected = selectedTheme === theme.id;

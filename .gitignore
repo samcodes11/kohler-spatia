@@ -21,3 +21,7 @@ dist-ssr/
 .vscode/
 .idea/
 *.swp
+
+# Bundles & Zip archives
+*.zip
+*.txt

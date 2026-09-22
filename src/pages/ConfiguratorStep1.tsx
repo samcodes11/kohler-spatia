@@ -125,13 +125,13 @@ export const ConfiguratorStep1: React.FC<Step1Props> = ({ onNext, onBack }) => {
           <div className="md:col-span-4 relative h-48 md:h-auto overflow-hidden">
             <img
               src={ASSET_MAP.step1.banner}
-              alt="KOHLER Spatia Spatial Planning"
+              alt="Spatia Spatial Planning"
               className="w-full h-full object-cover opacity-85 filter contrast-105"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/40 to-transparent md:block hidden pointer-events-none" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent md:hidden block pointer-events-none" />
             <span className="absolute bottom-3 right-3 text-xs sm:text-sm font-mono uppercase tracking-widest text-porcelain font-bold bg-ink/90 px-3 py-1.5 rounded border border-white/30 shadow-xs">
-              KOHLER Spatial Archetype
+              Spatial Archetype
             </span>
           </div>
         </div>

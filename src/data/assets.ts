@@ -1,5 +1,5 @@
 /**
- * KOHLER Spatia — Centralized Approved Asset Map
+ * Spatia — Centralized Approved Asset Map
  * Master inventory of approved Cloudinary CDN photography and architectural assets.
  * Section 75 Approved Image Inventory.
  */

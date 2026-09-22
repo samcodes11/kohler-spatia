@@ -1,5 +1,5 @@
 /**
- * KOHLER Spatia — Verified Static Image Map
+ * Spatia — Verified Static Image Map
  * Exhaustive mapping of all 30 core catalog products, architectural scenes,
  * and finish worlds to verified, direct Cloudinary CDN and high-res architectural assets.
  * Eliminates runtime Pexels network calls.

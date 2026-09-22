@@ -266,7 +266,7 @@ export const Path06EcoFootprint: React.FC<Path06Props> = ({ onProceedToConfigura
             </h3>
             <p className="text-base text-stone-dark font-medium leading-relaxed max-w-4xl">
               By aligning fixtures with your selected {waterHeaterType.replace('-', ' ')} heating infrastructure, 
-              Kohler Spatia curates optimal water delivery while curbing kilowatt draw. 
+              Spatia curates optimal water delivery while curbing kilowatt draw. 
               {['solar', 'heatpump'].includes(waterHeaterType) 
                 ? ' Thermostatic columns work best with stored hot water systems, delivering heirloom tactile control.'
                 : ' Digital showers pair flawlessly with instant or gas systems, optimizing flow dynamically for rapid heating.'}

@@ -46,12 +46,12 @@ export interface CuratedCollection {
  * Strictly adheres to max-1 product overlap across any two collections.
  */
 export const CURATED_COLLECTIONS: Record<SubThemeId, CuratedCollection> = {
-  // 1. Nature Retreat (Parent: Japanese Zen)
+  // 1. Japanese Zen (nature-retreat)
   'nature-retreat': {
     id: 'nature-retreat',
-    name: 'Nature Retreat',
-    parentTheme: 'Nature Retreat',
-    parentThemeId: 'nature-retreat',
+    name: 'Japanese Zen',
+    parentTheme: 'Japanese Zen',
+    parentThemeId: 'japanese-zen',
     tagline: 'Biophilic Hinoki & Basalt Sanctuary',
     finishes: 'Brushed Bronze · Tactile Cedar · Basalt',
     materialStory: 'Organic Hinoki cypress woodgrain, flamed thermal basalt stone, and warm brushed bronze fixtures invite calm sensory restoration.',
@@ -85,10 +85,10 @@ export const CURATED_COLLECTIONS: Record<SubThemeId, CuratedCollection> = {
     ]
   },
 
-  // 2. Modern Minimalist (Parent: Minimalist Modern)
+  // 2. Minimalist Modern (minimalist-modern)
   'minimalist-modern': {
     id: 'minimalist-modern',
-    name: 'Modern Minimalist',
+    name: 'Minimalist Modern',
     parentTheme: 'Minimalist Modern',
     parentThemeId: 'minimalist-modern',
     tagline: 'Pure Monolithic Precision',
@@ -124,12 +124,12 @@ export const CURATED_COLLECTIONS: Record<SubThemeId, CuratedCollection> = {
     ]
   },
 
-  // 3. Luxury Escape (Parent: Classic Luxury)
+  // 3. Classic Luxury (luxury-escape)
   'luxury-escape': {
     id: 'luxury-escape',
-    name: 'Luxury Escape',
-    parentTheme: 'Luxury Escape',
-    parentThemeId: 'luxury-escape',
+    name: 'Classic Luxury',
+    parentTheme: 'Classic Luxury',
+    parentThemeId: 'classic-luxury',
     tagline: 'Heirloom French Gold & Calacatta Marble',
     finishes: 'Vibrant French Gold · Honed Calacatta · Nero Marquina',
     materialStory: 'Opulent bookmatched Italian Calacatta marble, bullion gold metallurgy, and twin vanity suites create an unapologetic private palace.',
@@ -243,9 +243,7 @@ export const CURATED_COLLECTIONS: Record<SubThemeId, CuratedCollection> = {
 };
 
 export const ORDERED_COLLECTION_IDS: SubThemeId[] = [
-  'nature-retreat',
   'minimalist-modern',
   'luxury-escape',
-  'coastal-breeze',
-  'urban-chic'
+  'nature-retreat'
 ];

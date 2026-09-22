@@ -21,20 +21,11 @@ export const AiThemeBlendSection: React.FC<AiThemeBlendSectionProps> = ({ onStar
   const [activeBlend, setActiveBlend] = useState<ThemeBlend | null>(null);
   const [imageLoadError, setImageLoadError] = useState(false);
 
-  // 5 Canonical C16 Theme Worlds matching exact approved homepage swatches
+  // 3 Canonical Theme Worlds
   const themeSwatches = [
     {
-      id: 'nature-retreat' as ThemeId,
-      name: 'Nature Retreat',
-      tagline: 'Biophilic Spa Sanctuary',
-      finishes: 'Brushed Bronze · Fluted Hinoki · Basalt',
-      image: ASSET_MAP.themes['nature-retreat'],
-      accentColor: '#4A6B52',
-      tone: 'Restorative organic warmth and calm'
-    },
-    {
       id: 'minimalist-modern' as ThemeId,
-      name: 'Modern Minimalist',
+      name: 'Minimalist Modern',
       tagline: 'Pure Monolithic Clarity',
       finishes: 'Polished Chrome · Stucco · Microcement',
       image: ASSET_MAP.themes['minimalist-modern'],
@@ -42,8 +33,8 @@ export const AiThemeBlendSection: React.FC<AiThemeBlendSectionProps> = ({ onStar
       tone: 'Monochrome precision and crisp light'
     },
     {
-      id: 'luxury-escape' as ThemeId,
-      name: 'Luxury Escape',
+      id: 'classic-luxury' as ThemeId,
+      name: 'Classic Luxury',
       tagline: 'Heirloom French Gold',
       finishes: 'Vibrant French Gold · Calacatta · Marquina',
       image: ASSET_MAP.themes['luxury-escape'],
@@ -51,22 +42,13 @@ export const AiThemeBlendSection: React.FC<AiThemeBlendSectionProps> = ({ onStar
       tone: 'Opulent Calacatta and warm amber glow'
     },
     {
-      id: 'coastal-breeze' as ThemeId,
-      name: 'Coastal Breeze',
-      tagline: 'Airy Seaside Fluidity',
-      finishes: 'Brushed Nickel · Bleached Oak · Zellige',
-      image: ASSET_MAP.themes['coastal-breeze'],
-      accentColor: '#5B8A99',
-      tone: 'Breezy driftwood and seafoam lightness'
-    },
-    {
-      id: 'urban-chic' as ThemeId,
-      name: 'Urban Chic',
-      tagline: 'Loft Terracotta & Steel',
-      finishes: 'Matte Black · Fluted Clay · Raw Terrazzo',
-      image: ASSET_MAP.themes['urban-chic'],
-      accentColor: '#9C5843',
-      tone: 'Tactile earthiness and industrial silhouette'
+      id: 'japanese-zen' as ThemeId,
+      name: 'Japanese Zen',
+      tagline: 'Biophilic Spa Sanctuary',
+      finishes: 'Brushed Bronze · Fluted Hinoki · Basalt',
+      image: ASSET_MAP.themes['nature-retreat'],
+      accentColor: '#4A6B52',
+      tone: 'Restorative organic warmth and calm'
     }
   ];
 

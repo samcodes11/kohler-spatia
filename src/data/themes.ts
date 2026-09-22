@@ -1,13 +1,13 @@
 import { ASSET_MAP } from './assets';
 
 export type ThemeId = 
-  | 'nature-retreat' 
   | 'minimalist-modern' 
+  | 'classic-luxury' 
+  | 'japanese-zen'
+  | 'nature-retreat'
   | 'luxury-escape' 
   | 'coastal-breeze' 
-  | 'urban-chic'
-  | 'classic-luxury' 
-  | 'japanese-zen';
+  | 'urban-chic';
 
 export interface ThemeDefinition {
   id: ThemeId;
@@ -35,38 +35,17 @@ export interface ThemeDefinition {
   };
 }
 
-export const THEMES: Record<string, ThemeDefinition> = {
-  // C16-1: Nature Retreat
-  'nature-retreat': {
-    id: 'nature-retreat',
-    name: 'Nature Retreat',
-    finishes: 'Brushed Bronze / Tactile Cedar',
-    tone: 'Earthy organic tone',
-    accentColor: '#4A6B52',
-    accentHover: '#3B5542',
-    accentSoft: 'rgba(74, 107, 82, 0.15)',
-    description: 'Biophilic cedar, lime plaster, and warm stone create a restorative spa sanctuary.',
-    tagline: 'Natural sunlight and botanical textures calm the senses.',
-    lightingTemp: '3000K Warm Diffused Sunlight',
-    wallTexture: 'Fluted Hinoki Cypress & Lime Plaster',
-    floorTexture: 'Thermal Flamed Basalt Stone',
-    imageUrl: ASSET_MAP.themes['nature-retreat'],
-    previewImage: ASSET_MAP.themes['nature-retreat'],
-    recommendedFixtures: {
-      shower: 'shower-thermostatic',
-      toilet: 'toilet-smart',
-      faucet: 'faucet-wallmount',
-      lighting: 'light-cove',
-      flooring: 'floor-woodtile',
-      vanity: 'vanity-freestanding',
-      extras: ['extra-mirror', 'extra-ventilation']
-    }
-  },
+export const CANONICAL_THEME_IDS: ThemeId[] = [
+  'minimalist-modern',
+  'classic-luxury',
+  'japanese-zen'
+];
 
-  // C16-2: Modern Minimalist
+export const THEMES: Record<string, ThemeDefinition> = {
+  // 1. Minimalist Modern
   'minimalist-modern': {
     id: 'minimalist-modern',
-    name: 'Modern Minimalist',
+    name: 'Minimalist Modern',
     finishes: 'Polished Chrome / Vibrant Polished Nickel',
     tone: 'Crisp monochrome silver tone',
     accentColor: '#6E7E91',
@@ -90,10 +69,10 @@ export const THEMES: Record<string, ThemeDefinition> = {
     }
   },
 
-  // C16-3: Luxury Escape
-  'luxury-escape': {
-    id: 'luxury-escape',
-    name: 'Luxury Escape',
+  // 2. Classic Luxury
+  'classic-luxury': {
+    id: 'classic-luxury',
+    name: 'Classic Luxury',
     finishes: 'Vibrant French Gold / Polished Nero Marquina',
     tone: 'Dramatic bullion gold tone',
     accentColor: '#AE8A4E',
@@ -112,15 +91,92 @@ export const THEMES: Record<string, ThemeDefinition> = {
       faucet: 'faucet-bridge',
       lighting: 'light-cove',
       flooring: 'floor-marble',
-      vanity: 'vanity-doublebasin',
+      vanity: 'vanity-freestanding',
       extras: ['extra-mirror', 'extra-glass', 'extra-ventilation']
     }
   },
 
-  // C16-4: Coastal Breeze
+  // 3. Japanese Zen
+  'japanese-zen': {
+    id: 'japanese-zen',
+    name: 'Japanese Zen',
+    finishes: 'Brushed Bronze / Tactile Cedar / Basalt',
+    tone: 'Earthy organic dark basalt tone',
+    accentColor: '#4A6B52',
+    accentHover: '#3B5542',
+    accentSoft: 'rgba(74, 107, 82, 0.15)',
+    description: 'Biophilic cedar, flamed basalt stone, and muted brass create a restorative spa sanctuary.',
+    tagline: 'Natural sunlight, tactile cedar, and stone textures calm the senses.',
+    lightingTemp: '3000K Warm Diffused Sunlight',
+    wallTexture: 'Fluted Hinoki Cypress & Lime Plaster',
+    floorTexture: 'Thermal Flamed Basalt Stone',
+    imageUrl: ASSET_MAP.themes['nature-retreat'],
+    previewImage: ASSET_MAP.themes['nature-retreat'],
+    recommendedFixtures: {
+      shower: 'shower-thermostatic',
+      toilet: 'toilet-smart',
+      faucet: 'faucet-wallmount',
+      lighting: 'light-cove',
+      flooring: 'floor-woodtile',
+      vanity: 'vanity-freestanding',
+      extras: ['extra-mirror', 'extra-ventilation']
+    }
+  },
+
+  // Legacy mappings & aliases for backwards-compatibility
+  'luxury-escape': {
+    id: 'luxury-escape',
+    name: 'Classic Luxury',
+    finishes: 'Vibrant French Gold / Polished Nero Marquina',
+    tone: 'Dramatic bullion gold tone',
+    accentColor: '#AE8A4E',
+    accentHover: '#96743A',
+    accentSoft: 'rgba(174, 138, 78, 0.15)',
+    description: 'Bookmatched Calacatta marble and brushed gold hardware craft an opulent private sanctuary.',
+    tagline: 'Unapologetic architectural glamour with heirloom French Gold metallurgy.',
+    lightingTemp: '2700K Warm Luminescent Amber',
+    wallTexture: 'Bookmatched Calacatta & Nero Marquina',
+    floorTexture: 'Polished Calacatta Gold Tile',
+    imageUrl: ASSET_MAP.themes['luxury-escape'],
+    previewImage: ASSET_MAP.themes['luxury-escape'],
+    recommendedFixtures: {
+      shower: 'shower-thermostatic',
+      toilet: 'toilet-smart',
+      faucet: 'faucet-bridge',
+      lighting: 'light-cove',
+      flooring: 'floor-marble',
+      vanity: 'vanity-freestanding',
+      extras: ['extra-mirror', 'extra-glass', 'extra-ventilation']
+    }
+  },
+  'nature-retreat': {
+    id: 'nature-retreat',
+    name: 'Japanese Zen',
+    finishes: 'Brushed Bronze / Tactile Cedar / Basalt',
+    tone: 'Earthy organic dark basalt tone',
+    accentColor: '#4A6B52',
+    accentHover: '#3B5542',
+    accentSoft: 'rgba(74, 107, 82, 0.15)',
+    description: 'Biophilic cedar, flamed basalt stone, and muted brass create a restorative spa sanctuary.',
+    tagline: 'Natural sunlight, tactile cedar, and stone textures calm the senses.',
+    lightingTemp: '3000K Warm Diffused Sunlight',
+    wallTexture: 'Fluted Hinoki Cypress & Lime Plaster',
+    floorTexture: 'Thermal Flamed Basalt Stone',
+    imageUrl: ASSET_MAP.themes['nature-retreat'],
+    previewImage: ASSET_MAP.themes['nature-retreat'],
+    recommendedFixtures: {
+      shower: 'shower-thermostatic',
+      toilet: 'toilet-smart',
+      faucet: 'faucet-wallmount',
+      lighting: 'light-cove',
+      flooring: 'floor-woodtile',
+      vanity: 'vanity-freestanding',
+      extras: ['extra-mirror', 'extra-ventilation']
+    }
+  },
   'coastal-breeze': {
     id: 'coastal-breeze',
-    name: 'Coastal Breeze',
+    name: 'Minimalist Modern',
     finishes: 'Vibrant Brushed Nickel / Bleached Oak',
     tone: 'Airy seafoam azure tone',
     accentColor: '#5B8A99',
@@ -143,11 +199,9 @@ export const THEMES: Record<string, ThemeDefinition> = {
       extras: ['extra-mirror', 'extra-glass']
     }
   },
-
-  // C16-5: Urban Chic
   'urban-chic': {
     id: 'urban-chic',
-    name: 'Urban Chic',
+    name: 'Minimalist Modern',
     finishes: 'Matte Black / Fluted Terracotta',
     tone: 'Warm terracotta & matte black tone',
     accentColor: '#9C5843',
@@ -166,58 +220,6 @@ export const THEMES: Record<string, ThemeDefinition> = {
       faucet: 'faucet-wallmount',
       lighting: 'light-backlit',
       flooring: 'floor-terrazzo',
-      vanity: 'vanity-floating',
-      extras: ['extra-mirror', 'extra-ventilation']
-    }
-  },
-
-  // Legacy mappings for backwards-compatibility
-  'classic-luxury': {
-    id: 'classic-luxury',
-    name: 'Luxury Escape',
-    finishes: 'Vibrant French Gold / Vibrant Brushed Bronze',
-    tone: 'Warm gold tone',
-    accentColor: '#AE8A4E',
-    accentHover: '#96743A',
-    accentSoft: 'rgba(174, 138, 78, 0.15)',
-    description: 'Heritage proportions, bullion gold metals, and bookmatched stone craft timeless grandeur.',
-    tagline: 'Unapologetic grandeur with heirloom craftsmanship.',
-    lightingTemp: '2700K Warm Luminescent Glow',
-    wallTexture: 'Honed Calacatta Marble',
-    floorTexture: 'Polished Calacatta Gold Tile',
-    imageUrl: ASSET_MAP.themes['luxury-escape'],
-    previewImage: ASSET_MAP.themes['luxury-escape'],
-    recommendedFixtures: {
-      shower: 'shower-thermostatic',
-      toilet: 'toilet-smart',
-      faucet: 'faucet-bridge',
-      lighting: 'light-cove',
-      flooring: 'floor-marble',
-      vanity: 'vanity-freestanding',
-      extras: ['extra-mirror', 'extra-glass', 'extra-ventilation']
-    }
-  },
-  'japanese-zen': {
-    id: 'japanese-zen',
-    name: 'Nature Retreat',
-    finishes: 'Matte Black / Vibrant Titanium',
-    tone: 'Dark matte tone',
-    accentColor: '#2E343B',
-    accentHover: '#1B2024',
-    accentSoft: 'rgba(46, 52, 59, 0.2)',
-    description: 'Tactile basalt surfaces and smoked titanium create a mindful onsen bathing sanctuary.',
-    tagline: 'Wabi-sabi tranquility meets avant-garde spatial quietude.',
-    lightingTemp: '3000K Soft Diffused Amber Light',
-    wallTexture: 'Charcoal Slatted Cedar & Basalt',
-    floorTexture: 'Thermal Flamed Basalt Stone',
-    imageUrl: ASSET_MAP.themes['japanese-zen'],
-    previewImage: ASSET_MAP.themes['japanese-zen'],
-    recommendedFixtures: {
-      shower: 'shower-steam',
-      toilet: 'toilet-smart',
-      faucet: 'faucet-wallmount',
-      lighting: 'light-cove',
-      flooring: 'floor-mattestone',
       vanity: 'vanity-floating',
       extras: ['extra-mirror', 'extra-ventilation']
     }

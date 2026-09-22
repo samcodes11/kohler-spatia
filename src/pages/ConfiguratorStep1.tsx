@@ -33,6 +33,7 @@ export const ConfiguratorStep1: React.FC<Step1Props> = ({ onNext, onBack }) => {
     bathroomType, setBathroomType,
     plumbingLayout, setPlumbingLayout,
     budget, setBudget,
+    projectTimelineDays, setProjectTimelineDays,
     selectedTheme, setSelectedTheme,
     selectedBlend,
     priorityFocus, setPriorityFocus,
@@ -623,7 +624,49 @@ export const ConfiguratorStep1: React.FC<Step1Props> = ({ onNext, onBack }) => {
             </p>
           </div>
 
-          {/* Theme Selection Box (5 C16 Theme Worlds) */}
+          {/* Project Completion Timeline Box */}
+          <div className="bg-white border-2 border-stone/25 rounded-sm p-6 sm:p-8 space-y-4 shadow-editorial">
+            <div className="flex items-center justify-between border-b border-stone/20 pb-4">
+              <div>
+                <h3 className="font-serif text-2xl font-bold text-ink">Project Completion Timeline</h3>
+                <p className="text-sm text-stone-dark font-medium mt-1">
+                  Target lead time for fixture procurement & site execution.
+                </p>
+              </div>
+              <span className="font-mono text-2xl sm:text-3xl font-bold text-accent">
+                {projectTimelineDays}d
+              </span>
+            </div>
+
+            <div className="space-y-3.5 pt-2">
+              <input
+                type="range"
+                min={3}
+                max={100}
+                step={1}
+                value={projectTimelineDays}
+                onChange={e => setProjectTimelineDays(parseInt(e.target.value))}
+                className="w-full accent-accent h-2.5 bg-stone/25 rounded-lg appearance-none cursor-pointer"
+              />
+              <div className="flex justify-between text-xs sm:text-sm font-mono text-stone-dark font-bold">
+                <span>3d (Express)</span>
+                <span>15d</span>
+                <span>30d (Standard)</span>
+                <span>60d</span>
+                <span>100d (Bespoke)</span>
+              </div>
+            </div>
+
+            <p className="text-sm text-stone-dark leading-relaxed font-medium">
+              {projectTimelineDays <= 21
+                ? 'Express timeline (<21 days): AI prioritizes in-stock fixtures and rapid dispatch logistics.'
+                : projectTimelineDays >= 60
+                ? 'Bespoke timeline (60+ days): Enables custom hand-crafted metallics and made-to-order finishes.'
+                : 'Standard timeline (22-59 days): Optimal balance for full architectural suite delivery.'}
+            </p>
+          </div>
+
+          {/* Theme Selection Box (3 Canonical Theme Worlds) */}
           <div className="bg-white border-2 border-stone/25 rounded-sm p-6 sm:p-8 space-y-4 shadow-editorial">
             <div className="border-b border-stone/20 pb-4 flex items-center justify-between">
               <div>
@@ -633,7 +676,7 @@ export const ConfiguratorStep1: React.FC<Step1Props> = ({ onNext, onBack }) => {
                 </p>
               </div>
               <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-accent font-bold hidden sm:inline">
-                5 Worlds
+                3 Worlds
               </span>
             </div>
 
@@ -664,7 +707,7 @@ export const ConfiguratorStep1: React.FC<Step1Props> = ({ onNext, onBack }) => {
             )}
 
             <div className="space-y-3 pt-2">
-              {(['nature-retreat', 'minimalist-modern', 'luxury-escape', 'coastal-breeze', 'urban-chic'] as ThemeId[]).map(themeId => {
+              {(['minimalist-modern', 'classic-luxury', 'japanese-zen'] as ThemeId[]).map(themeId => {
                 const theme = THEMES[themeId];
                 if (!theme) return null;
                 const isSelected = selectedTheme === theme.id;

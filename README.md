@@ -1,14 +1,13 @@
-# KOHLER Spatia — AI-Powered Bathroom Spatial Intelligence Platform
+# Spatia — AI-Powered Bathroom Spatial Intelligence Platform
 
-> **Concept Case Study Note**: This is a CONCEPT / CASE STUDY project referencing Kohler for portfolio purposes only — not an official Kohler product.
-> *"Concept case study — not affiliated with Kohler Co."*
+> **Concept Case Study Note**: Concept case study — not affiliated with any specific fixture brand.
    ## Video Demo
    [Watch the walkthrough](https://drive.google.com/file/d/18WCz8PXwN88g1LjfUgw6cQtHFZsRjiBE/view?usp=sharing)
 ---
 
 ## Brand & Design System
 
-- **Wordmark**: `KOHLER` in a bold, heavy, confident sans-serif with `Spatia` as a lighter-weight suffix.
+- **Wordmark**: `Spatia` in a bold, heavy, confident sans-serif.
 - **Palette**:
   - Ink Charcoal: `#1C2126` (Primary dark / text)
   - Porcelain: `#F6F3EE` (Primary light background)
@@ -19,7 +18,7 @@
   - *Classic Luxury*: Vibrant French Gold / Vibrant Brushed Bronze (Warm gold tone `#AE8A4E`)
   - *Japanese Zen*: Matte Black / Vibrant Titanium (Dark matte tone `#2E343B`)
 - **Typography**: Montserrat (used universally across editorial display headlines, titles, navigation, and body copy) paired with JetBrains Mono for technical specs.
-- **Product Imagery**: Generic unbranded stock photography sourced via the Pexels API (`VITE_PEXELS_API_KEY`) with curated fallback swatches and mathematical Three.js materials. Never scraped or replicated from actual Kohler product photography.
+- **Product Imagery**: Generic unbranded stock photography sourced via the Pexels API (`VITE_PEXELS_API_KEY`) with curated fallback swatches and mathematical Three.js materials. Never scraped or replicated from actual brand product photography.
 
 ---
 
@@ -66,7 +65,7 @@ src/services/
   - **Layout C — Accessibility-Oriented**: Zero-threshold roll-in entry, 1200mm turning circle, comfort height seating.
 
 ### 4. Sustainability & Environmental Engine (`sustainabilityEngine.ts`)
-- Deterministic life-cycle calculations comparing builder-grade baseline fixtures against Kohler low-flow Katalyst fixtures.
+- Deterministic life-cycle calculations comparing builder-grade baseline fixtures against low-flow Katalyst fixtures.
 - Calculates annual water savings (Litres/year), water reduction percentage, water-heating energy savings (kWh), carbon emissions avoided (kg CO2e), and utility cost savings (INR).
 - Generates datasets for two custom luxury SVG charts:
   - **Graph 1**: Water Efficiency vs. Cost Scatter Benchmark.

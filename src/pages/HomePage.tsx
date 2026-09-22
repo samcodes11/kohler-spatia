@@ -257,16 +257,16 @@ image: IMAGE_MAP['theme-minimalist-modern'] || ASSET_MAP.homepage.finishWorlds.m
 number: '01'
 },
 {
-id: 'luxury-escape',
-name: 'Luxury Escape',
+id: 'classic-luxury',
+name: 'Classic Luxury',
 finishes: 'Vibrant French Gold & Calacatta Marble',
 desc: 'Opulent fluted appointments, sculpted cross handles, and heritage architectural grandeur.',
 image: IMAGE_MAP['theme-luxury-escape'] || ASSET_MAP.homepage.finishWorlds.classicLuxury,
 number: '02'
 },
 {
-id: 'nature-retreat',
-name: 'Nature Retreat',
+id: 'japanese-zen',
+name: 'Japanese Zen',
 finishes: 'Matte Black & Smoked Hinoki Oak',
 desc: 'Biophilic timber tactility, submerged soaking proportions, and calming ritual hydrotherapy.',
 image: IMAGE_MAP['theme-nature-retreat'] || ASSET_MAP.homepage.finishWorlds.japaneseZen,

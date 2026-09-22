@@ -79,13 +79,10 @@ export const ConfiguratorStep2: React.FC<Step2Props> = ({ onBack, onNext }) => {
   };
 
   const categories: { key: ProductCategory; label: string; pickType: 'single' | 'multi' }[] = [
-    { key: 'shower', label: '1. Shower System', pickType: 'single' },
-    { key: 'toilet', label: '2. Sanitation & Commode', pickType: 'single' },
-    { key: 'faucet', label: '3. Basin Faucet & Mixers', pickType: 'single' },
-    { key: 'lighting', label: '4. Architectural Lighting', pickType: 'single' },
-    { key: 'flooring', label: '5. Surface Flooring & Tile', pickType: 'single' },
-    { key: 'vanity', label: '6. Vanity & Cabinetry', pickType: 'single' },
-    { key: 'mirror-extras', label: '7. Mirror & Acoustic Extras', pickType: 'multi' }
+    { key: 'faucet', label: '1. Faucets', pickType: 'single' },
+    { key: 'toilet', label: '2. Smart Toilets', pickType: 'single' },
+    { key: 'shower', label: '3. Thermostatic Showers', pickType: 'single' },
+    { key: 'vanity', label: '4. Vanities', pickType: 'single' }
   ];
 
   const themeDef = THEMES[selectedTheme];
@@ -97,7 +94,7 @@ export const ConfiguratorStep2: React.FC<Step2Props> = ({ onBack, onNext }) => {
 
   // Proposed cheaper swaps calculation for the modal
   const proposedCheaperSwaps = React.useMemo(() => {
-    const singleCats: ProductCategory[] = ['shower', 'toilet', 'faucet', 'lighting', 'flooring', 'vanity'];
+    const singleCats: ProductCategory[] = ['faucet', 'toilet', 'shower', 'vanity'];
     const swaps: { category: string; current: ProductItem; cheaper: ProductItem; savings: number }[] = [];
     singleCats.forEach(cat => {
       const currentId = selections[cat as keyof typeof selections] as string;

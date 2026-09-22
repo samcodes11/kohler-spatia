@@ -69,6 +69,8 @@ interface ConfiguratorContextType {
   setPlumbingLayout: (layout: PlumbingLayout) => void;
   budget: number;
   setBudget: (budget: number) => void;
+  projectTimelineDays: number;
+  setProjectTimelineDays: (days: number) => void;
   selectedTheme: ThemeId;
   setSelectedTheme: (themeId: ThemeId) => void;
   selectedBlend: ThemeBlend | null;
@@ -181,6 +183,7 @@ export const ConfiguratorProvider: React.FC<{ children: React.ReactNode }> = ({ 
   const [bathroomType, setBathroomType] = useState<BathroomType>('Master');
   const [plumbingLayout, setPlumbingLayout] = useState<PlumbingLayout>('renovating');
   const [budget, setBudget] = useState<number>(450000);
+  const [projectTimelineDays, setProjectTimelineDays] = useState<number>(30);
   const [selectedTheme, setSelectedTheme] = useState<ThemeId>('luxury-escape');
   const [priorityFocus, setPriorityFocus] = useState<UserPriorityFocus>(null);
   const [wallFinish, setWallFinish] = useState<string>('warm-putty');
@@ -623,6 +626,8 @@ export const ConfiguratorProvider: React.FC<{ children: React.ReactNode }> = ({ 
         setPlumbingLayout,
         budget,
         setBudget,
+        projectTimelineDays,
+        setProjectTimelineDays,
         selectedTheme,
         setSelectedTheme,
         selectedBlend,

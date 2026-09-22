@@ -15,6 +15,7 @@ import { ConfiguratorResult } from './pages/ConfiguratorResult';
 import { AiEnquiryTriage } from './components/ai/AiEnquiryTriage';
 import { UserDashboard } from './components/dashboard/UserDashboard';
 import { AboutPage } from './pages/AboutPage';
+import { StepNavigationFooter } from './components/layout/StepNavigationFooter';
 
 type AppView = 'home' | 'configurator' | 'enquiries' | 'dashboard' | 'about';
 
@@ -44,7 +45,7 @@ const AppContent: React.FC = () => {
         )}
 
         {currentView === 'configurator' && (
-          <div className="py-6">
+          <div className="py-6 pb-24">
             {activeStep === 1 && (
               <ConfiguratorStep1 
                 onBack={() => handleNavigate('home')}
@@ -63,6 +64,10 @@ const AppContent: React.FC = () => {
                 onNavigateToDashboard={() => handleNavigate('dashboard')}
               />
             )}
+            <StepNavigationFooter 
+              onNavigateHome={() => handleNavigate('home')}
+              onNavigateDashboard={() => handleNavigate('dashboard')}
+            />
           </div>
         )}
 
